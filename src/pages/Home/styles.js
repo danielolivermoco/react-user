@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import Background from '../../assets/background1.svg'
+import { Link } from 'react-router-dom'
+
 
 export const Container = styled.div`
     background: url("${Background}");
@@ -60,7 +62,7 @@ export const Input = styled.input`
     color: #ffffff;
     margin-bottom: 34px;
 `
-export const Button = styled.button`
+export const Button = styled(Link)`
     width: 342px;
     height: 74px;
     margin-top: 130px;

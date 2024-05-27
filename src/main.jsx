@@ -1,12 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { App } from './pages/Home/App.jsx'
-import GlobalStyle from './globalStyle'
+import GlobalStyle from './styles/globalStyle'
+import MyRoutes from './routes'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <>
-    <App /> <GlobalStyle />
-  </>,
+  <React.StrictMode>
+    <MyRoutes /> <GlobalStyle />
+  </React.StrictMode>,
 )
 

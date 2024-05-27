@@ -7,7 +7,7 @@ import Arrow from '../../assets/arrow.svg'
 import { Container, H1, Image, ContainerItens, InputLabel, Input, Button } from './styles'
 
 
-export function App() {
+function App() {
 
   const [users, setUsers] = useState([])
   const inputName = useRef()
@@ -33,9 +33,11 @@ export function App() {
         <InputLabel>Idade</InputLabel>
         <Input ref={inputAge} placeholder="Idade" />
 
-        <Button onClick={addNewUser}> Cadastrar <img src={Arrow} alt='imagem=seta' /></Button>
+        <Button to="/usuarios" onClick={addNewUser}> Cadastrar <img src={Arrow} alt='imagem=seta' /></Button>
 
       </ContainerItens>
     </Container>
   )
 }
+
+export default App
