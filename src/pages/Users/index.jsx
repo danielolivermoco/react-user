@@ -18,14 +18,14 @@ function Users() {
 
   useEffect(() => {
     async function fetchUsers() {
-      const { data: newUsers} = await axios.get(`${baseUrl}/projects`)
+      const { data: newUsers} = await axios.get(`${baseUrl}/users`)
     setUsers(newUsers)
     }
     fetchUsers()
   }, [])
 
   async function deleteUser(userId) {
-    await axios.delete(`${baseUrl}/projects/${userId}`)
+    await axios.delete(`${baseUrl}/users/${userId}`)
     const newUsers = users.filter((user) => user.id !== userId)
     setUsers(newUsers)
   }

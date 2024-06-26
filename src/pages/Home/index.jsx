@@ -19,7 +19,7 @@ function App() {
 
   async function addNewUser() {
 
-    const { data: newUser } = await axios.post(`${baseUrl}/projects`, { name: inputName.current.value, age: inputAge.current.value })
+    const { data: newUser } = await axios.post(`${baseUrl}/users`, { name: inputName.current.value, age: inputAge.current.value })
 
     setUsers([...users, newUser])
 
